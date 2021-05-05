@@ -1,0 +1,25 @@
+{
+    "name": "ros2-snippets",
+    "displayName": "ROS2 snippets",
+    "description": "Useful snippets for developing with ROS2",
+    "version": "0.0.0",
+    "publisher": "HansRobo",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/HansRobo/ros2-snippets.git"
+    },
+    "engines": {
+        "vscode": "^1.21.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "cpp",
+                "path": "./snippets/cpp.json"
+            }
+        ]
+    }
+}
