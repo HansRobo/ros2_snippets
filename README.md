@@ -1,6 +1,9 @@
 # ros2_snippets
 
 ## LoadMap
+
+### 0.0.0
+- publish this vscode extension
 ### 0.1.0
 - init
 - publish
