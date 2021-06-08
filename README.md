@@ -1,5 +1,12 @@
 # ros2_snippets
 
+## publish
+Before publish, please check the version number in package.json.　　
+~~~bash
+npm install -g vsce
+vsce package
+vsce publish
+~~~
 ## LoadMap
 
 ### 0.0.0

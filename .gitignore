@@ -1,5 +1,5 @@
-.vscode
-.vscode/**
 cpp_wip.json
 log
 log/**
+package-lock.json
+*.vsix
