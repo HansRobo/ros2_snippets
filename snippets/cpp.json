@@ -5,5 +5,23 @@
             "#include \"rclcpp_components/register_node_macro.hpp\"",
             "RCLCPP_COMPONENTS_REGISTER_NODE(${1:/*class_name*/});\n$0"
         ]
-    }
+    },
+    "rclcpp::Publisher": {
+		"scope": "cpp",
+		"prefix": "publisher_rclcpp",
+		"body": "create_publisher<${1:/*msg type*/}>(\"topic_name\", 1);\n$0",
+		"description": "rclcpp::Publisher"
+	},
+    "rclcpp::Subscriber": {
+		"scope": "cpp",
+		"prefix": "subscriber_rclcpp",
+		"body": "create_subscription<${1:/*msg type*/}>(\"${2:topic name}\", 10, std::bind(&${3:T::callback},this,std::placeholders::_1));\n$0",
+		"description": "rclcpp::Subscriber"
+	},
+    "rclcpp::Subscriber(lambda)": {
+		"scope": "cpp",
+		"prefix": "subscriber_lambda_rclcpp",
+		"body": "create_subscription<${1:/*msg type*/}>(\"${2:topic name}\", 10, [this](const ${1:/*msg type*/}::SharedPtr msg) -> void {$0/*do something*/});\n",
+		"description": "rclcpp::Subscriber(lambda)"
+	}
 }
