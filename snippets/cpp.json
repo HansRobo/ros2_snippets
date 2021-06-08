@@ -5,5 +5,11 @@
             "#include \"rclcpp_components/register_node_macro.hpp\"",
             "RCLCPP_COMPONENTS_REGISTER_NODE(${1:/*class_name*/});\n$0"
         ]
-    }
+    },
+    "rclcpp::init": {
+		"scope": "cpp",
+		"prefix": "init_rclcpp",
+		"body": "rclcpp::init(argc, argv, \"${1:/*node_name*/}\");\nrclcpp::NodeHandle n;\n$0",
+		"description": "rclcpp::init()"
+	}
 }
