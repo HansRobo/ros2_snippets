@@ -6,22 +6,22 @@
             "RCLCPP_COMPONENTS_REGISTER_NODE(${1:/*class_name*/});\n$0"
         ]
     },
-    "rclcpp::init": {
-		"scope": "cpp",
-		"prefix": "init_rclcpp",
-		"body": "rclcpp::init(argc, argv, \"${1:/*node_name*/}\");\nrclcpp::NodeHandle n;\n$0",
-		"description": "rclcpp::init()"
-	},
     "rclcpp::Publisher": {
 		"scope": "cpp",
 		"prefix": "publisher_rclcpp",
-		"body": "rclcpp::Publisher ${1:/*pub_name*/}_pub = ${2:n}.advertise<${3:/*msg_type*/}>(\"${4:/*topic_name*/}\", ${5:1000});\n$0",
+		"body": "create_publisher<${1:/*msg type*/}>(\"topic_name\", 1);\n$0",
 		"description": "rclcpp::Publisher"
 	},
     "rclcpp::Subscriber": {
 		"scope": "cpp",
 		"prefix": "subscriber_rclcpp",
-		"body": "rclcpp::Subscriber ${1:/*sub_name*/}_sub = ${2:n}.subscribe(\"${3:/*topic_name*/}\", ${4:1000}, ${5:/*subCallback*/}_callback);\n$0",
+		"body": "create_subscription<${1:/*msg type*/}>(\"${2:topic name}\", 10, std::bind(&${3:T::callback},this,std::placeholders::_1));\n$0",
 		"description": "rclcpp::Subscriber"
+	},
+    "rclcpp::Subscriber(lambda)": {
+		"scope": "cpp",
+		"prefix": "subscriber_lambda_rclcpp",
+		"body": "create_subscription<${1:/*msg type*/}>(\"${2:topic name}\", 10, [this](const ${1:/*msg type*/}::SharedPtr msg) -> void {$0/*do something*/});\n",
+		"description": "rclcpp::Subscriber(lambda)"
 	}
 }
