@@ -25,7 +25,6 @@ vsce publish
 
 ### 0.1.0
 
-- init
 - publish
 - subscribe
   - member function callback
