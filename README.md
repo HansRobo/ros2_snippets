@@ -1,6 +1,6 @@
 # ros2_snippets
 
-## publish
+## publish(for publisher)
 Before publish, please check the version number in package.json.　　
 ~~~bash
 npm install -g vsce
