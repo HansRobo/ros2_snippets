@@ -53,5 +53,23 @@
 		"prefix": "RCLCPP_FATAL",
 		"body": "RCLCPP_FATAL(get_logger(), \"${1:}\");\n$0",
 		"description":"RCLCPP_FATAL"
+	},
+	"declare_parameter":{
+		"scope": "cpp",
+		"prefix": "declare_parameter",
+		"body": "declare_parameter(\"${1:}\", ${2:});\n$0",
+		"description":"declare parameter"
+	},
+	"get_parameter":{
+		"scope": "cpp",
+		"prefix": "get_parameter",
+		"body": "get_parameter(\"${1:}\", ${2:});\n$0",
+		"description":"get parameter"
+	},
+	"declare_get_parameter":{
+		"scope": "cpp",
+		"prefix": "declare_get_parameter",
+		"body": "declare_parameter(\"${1:}\", ${2:});\nget_parameter(\"${1:}\", ${3:});\n$0",
+		"description":"declare & get parameter"
 	}
 }
