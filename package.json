@@ -2,7 +2,7 @@
     "name": "ros2-snippets",
     "displayName": "ROS2 snippets",
     "description": "Useful snippets for developing with ROS2",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "publisher": "HansRobo",
     "repository": {
         "type": "git",
