@@ -17,6 +17,6 @@ vsce package
 vsce publish
 ```
 
-## LoadMap
+## RoadMap
 
-See [roadmap.md]()
+See [roadmap.md](roadmap.md)
