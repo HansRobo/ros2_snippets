@@ -19,22 +19,6 @@ vsce publish
 
 ## LoadMap
 
-### 0.0.0
-
-- publish this vscode extension
-
-### 0.1.0
-
-- publish
-- subscribe
-  - member function callback
-  - lambda function callback
-
-### 0.2.0
-
-- log
-- parameter
-
 ### 0.3.0
 
 - composite node class template
@@ -94,10 +78,14 @@ vsce publish
 ## Todo
 
 - Add snippets
-  - log
+  - ~~log~~
   - parameter
-    - declare
-    - get
+    - ~~declare~~
+    - ~~get~~
+    - parameter_client
+    - parameter_list
+    - parameter_event
+    - parameter_event_handler
   - composite node class template
   - timer
   - license template
