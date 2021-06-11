@@ -23,5 +23,35 @@
 		"prefix": "subscriber_lambda_rclcpp",
 		"body": "create_subscription<${1:/*msg type*/}>(\"${2:topic name}\", 10, [this](const ${1:/*msg type*/}::SharedPtr msg) -> void {$0/*do something*/});\n",
 		"description": "rclcpp::Subscriber(lambda)"
+	},
+	"RCLCPP_DEBUG":{
+		"scope": "cpp",
+		"prefix": "RCLCPP_DEBUG",
+		"body": "RCLCPP_DEBUG(get_logger(), \"${1:}\");\n$0",
+		"description":"RCLCPP_DEBUG"
+	},
+	"RCLCPP_INFO":{
+		"scope": "cpp",
+		"prefix": "RCLCPP_INFO",
+		"body": "RCLCPP_INFO(get_logger(), \"${1:}\");\n$0",
+		"description":"RCLCPP_INFO"
+	},
+	"RCLCPP_WARN":{
+		"scope": "cpp",
+		"prefix": "RCLCPP_WARN",
+		"body": "RCLCPP_WARN(get_logger(), \"${1:}\");\n$0",
+		"description":"RCLCPP_WARN"
+	},
+	"RCLCPP_ERROR":{
+		"scope": "cpp",
+		"prefix": "RCLCPP_ERROR",
+		"body": "RCLCPP_ERROR(get_logger(), \"${1:}\");\n$0",
+		"description":"RCLCPP_ERROR"
+	},
+	"RCLCPP_FATAL":{
+		"scope": "cpp",
+		"prefix": "RCLCPP_FATAL",
+		"body": "RCLCPP_FATAL(get_logger(), \"${1:}\");\n$0",
+		"description":"RCLCPP_FATAL"
 	}
 }
