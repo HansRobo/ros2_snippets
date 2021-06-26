@@ -1,5 +1,7 @@
 # ros2_snippets
 
+[https://marketplace.visualstudio.com/items?itemName=HansRobo.ros2-snippets]()
+
 ## How to test locally
 
 1. Clone this repository
